@@ -1,24 +1,22 @@
-<div class="row">
-    <div class="col-md-1">
-        {{player.name}}
-    </div>
-    <div class="col-md-1">
-        {{player.mu}}
-    </div>
-    <div class="col-md-1">
-        {{player.sigma}}
-    </div>    
-</div>
-<div class="row">
-    <div class="col-md-1">
-        {{player.name}}
-    </div>
-    <div class="col-md-1">
-        {{player.mu}}
-    </div>
-    <div class="col-md-1">
-        {{player.sigma}}
-    </div>    
-</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Mu</th>
+            <th>Sigma</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each players as |player|}}
+            <tr>
+                <td>{{player.name}}</td>
+                <td>{{player.mu}}</td>
+                <td>{{player.sigma}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
 
 {{yield}}

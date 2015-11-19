@@ -1,4 +1,9 @@
-<h3>Players</h3>
-{{#each model as |player|}}
-    {{player-table player=player}}
-{{/each}}
+
+<div class="container">
+    <div class="row">
+        <h3>Players</h3>
+    </div>
+    <div class="row">
+        {{player-table players=model}}
+    </div>
+</div>
