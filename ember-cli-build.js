@@ -11,7 +11,7 @@ module.exports = function(defaults) {
         'importBootstrapJS': true,
         'importBootstrapTheme': true
     }
-  
+
   });
 
   // Use `app.import` to add additional libraries to the generated

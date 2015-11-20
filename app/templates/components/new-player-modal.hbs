@@ -1,0 +1,18 @@
+<button class="destroy" {{action "toggleModal"}}>ADD PLAYER</button>
+
+{{#if isShowingModal}}
+  
+  {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
+
+    <div class="container">
+        <div class="row">
+            The new player's name is
+        </div>
+        <div class="row">
+            {{input type="text" id="new-name" placeholder="Badd Baddinger" value=newName enter="submitPlayer"}}
+        </div>
+    </div>
+
+  {{/modal-dialog}}
+
+{{/if}}

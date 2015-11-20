@@ -11,7 +11,7 @@ module.exports = function(environment) {
         'default-src': "'none'",
         'script-src': "'self'",
         'font-src': "'self'",
-        'connect-src': "'self'",
+        'connect-src': "'self' https://agile-gorge-4676.herokuapp.com/api/v1/players",
         'img-src': "'self'",
         'style-src': "'self' 'unsafe-inline'",
         'media-src': "'self'"
@@ -28,6 +28,8 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     }
+
+
   };
 
   if (environment === 'development') {
