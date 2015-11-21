@@ -1,7 +1,8 @@
 import DS from 'ember-data';
 
 export default DS.ActiveModelAdapter.extend({
-  namespace: 'api/v1'
+  namespace: 'api/v1',
+  host: 'https://agile-gorge-4676.herokuapp.com'
 });
 
 // export default DS.RESTAdapter.extend({
