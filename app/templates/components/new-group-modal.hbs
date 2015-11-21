@@ -1,0 +1,18 @@
+<button class="destroy button" {{action "toggleModal"}}>ADD GROUP</button>
+
+{{#if isShowingModal}}
+  
+  {{#modal-dialog close="toggleModal" targetAttachment="center" translucentOverlay=true}}
+
+    <div class="container">
+        <div class="row">
+            The new group's name is
+        </div>
+        <div class="row">
+            {{input type="text" id="new-name" placeholder="Group of Eight" value=newName enter="submitGroup"}}
+        </div>
+    </div>
+
+  {{/modal-dialog}}
+
+{{/if}}

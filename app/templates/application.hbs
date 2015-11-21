@@ -1,3 +1,41 @@
-<h2 id="title">PING PONG</h2>
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="col-md-3 col-md-offset-0">
+            <h2 id="title">PING PONG</h2>
+        </div>
+    </div>
+    
+    <div class="row">
+        
+        <div class="col-md-2">
+            
+            <div class="row">
+                <h3></h3>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        {{#link-to 'groups.index'}} 
+                            <span class="center-block"> Groups </span> 
+                        {{/link-to}}
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        {{#link-to 'players.index'}} 
+                            <span class="center-block"> Players </span>
+                        {{/link-to}}
+                    </div>
+                </div> 
+            
+            </div>
+           
+        </div>
+        
+        <div class="col-md-10 center-block">
+            {{outlet}}
+        </div>
+    
+    </div>
 
-{{outlet}}
+</div>

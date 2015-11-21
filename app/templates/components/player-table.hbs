@@ -2,18 +2,22 @@
     <thead>
         <tr>
             <th>Name</th>
-            <th>Mu</th>
-            <th>Sigma</th>
+            <th>Total</th>
+            <th>Singles</th>
+            <th>Doubles</th>
+            <th>Rating</th>
         </tr>
     </thead>
     <tbody>
 
         {{#each players as |player|}}
-            <tr>
+            {{#link-to 'players.show' player.id tagName="tr"}}
                 <td>{{player.name}}</td>
+                <td>{{player.total_wins}}-{{player.total_losses}}</td>
+                <td>{{player.singles_wins}}-{{player.singles_losses}}</td>
+                <td>{{player.doubles_wins}}-{{player.doubles_losses}}</td>
                 <td>{{player.mu}}</td>
-                <td>{{player.sigma}}</td>
-            </tr>
+            {{/link-to}}
         {{/each}}
     </tbody>
 </table>

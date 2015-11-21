@@ -1,0 +1,18 @@
+<div class="row">
+    
+    <div class="row">
+        <h3> 
+            {{model.name}}
+        </h3>
+        <h5>
+            this group has {{model.players.length}} members 
+        </h5>
+    </div>
+
+    <br>
+
+    {{player-table players=model.players}}
+
+</div>
+
+

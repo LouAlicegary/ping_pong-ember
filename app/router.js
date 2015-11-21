@@ -7,7 +7,15 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
 
-    this.route('players');
+  this.route('index', { path: '/' });
+
+  this.route('players', { path: '/players' }, function() {
+    this.route('show', {path: ':player_id'});
+  });
+
+  this.route('groups', { path: '/groups' }, function() {
+    this.route('show', {path: ':group_id'});
+  });
 
 });
 

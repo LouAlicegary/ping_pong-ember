@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each groups as |group|}}
+            {{#link-to 'groups.show' group.id tagName="tr"}}
+                <td>{{group.name}}</td>
+            {{/link-to}}
+        {{/each}}
+    </tbody>
+</table>
+
+
+{{yield}}

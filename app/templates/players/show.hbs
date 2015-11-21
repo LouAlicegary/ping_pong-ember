@@ -1,0 +1,10 @@
+<div class="row">
+    <h3>{{model.firstObject.name}} </h3>
+</div>
+
+{{#each model.firstObject.groups as |group|}}
+    {{group.name}}
+{{/each}}
+
+
+{{player-table players=model}}
