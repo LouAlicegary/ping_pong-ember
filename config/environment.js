@@ -11,7 +11,7 @@ module.exports = function(environment) {
         'default-src': "'none'",
         'script-src': "'self'",
         'font-src': "'self'",
-        'connect-src': "'self' https://agile-gorge-4676.herokuapp.com/api/v1/players",
+        'connect-src': "'self' http://localhost:3000 https://agile-gorge-4676.herokuapp.com/api/v1/players",
         'img-src': "'self'",
         'style-src': "'self' 'unsafe-inline'",
         'media-src': "'self'"
@@ -38,6 +38,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.API_URL = "http://localhost:3000";
   }
 
   if (environment === 'test') {
@@ -53,7 +54,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.API_URL = 'https://agile-gorge-4676.herokuapp.com';
   }
 
   return ENV;

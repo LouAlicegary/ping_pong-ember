@@ -1,11 +1,7 @@
 import DS from 'ember-data';
+import ENV from 'ping-pong/config/environment';
 
 export default DS.ActiveModelAdapter.extend({
-  namespace: 'api/v1',
-  host: 'https://agile-gorge-4676.herokuapp.com'
+    namespace: 'api/v1',
+    host: ENV.API_URL
 });
-
-// export default DS.RESTAdapter.extend({
-//   namespace: 'api/v1',
-//   //host: 'https://agile-gorge-4676.herokuapp.com'
-// });

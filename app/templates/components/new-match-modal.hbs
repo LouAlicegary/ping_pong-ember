@@ -1,4 +1,4 @@
-<button class="destroy" {{action "toggleModal"}}>ADD PLAYER</button>
+<button class="destroy button" {{action "toggleModal"}}>ADD MATCH</button>
 
 {{#if isShowingModal}}
   
@@ -6,10 +6,10 @@
 
     <div class="container">
         <div class="row">
-            The new player's name is
+            The new match
         </div>
         <div class="row">
-            {{input type="text" id="new-name" placeholder="Badd Baddinger" value=newName enter="submitPlayer"}}
+            {{input type="text" id="new-name" placeholder="Name" value=newName enter="submitMatch"}}
         </div>
     </div>
 

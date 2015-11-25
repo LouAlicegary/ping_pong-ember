@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Winner</th>
+            <th>Loser</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each matches as |match|}}
+            <!-- The below tagName='' part makes sure this component doesn't get wrapped in a container div -->
+            {{match-table-row match=match tagName=""}}
+        {{/each}}
+    </tbody>
+</table>
+
+
+{{yield}}
