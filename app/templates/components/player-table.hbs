@@ -10,12 +10,12 @@
     </thead>
     <tbody>
 
-        {{#each players as |player|}}
+        {{#each sortedPlayers as |player|}}
             {{#link-to 'players.show' player.id tagName="tr"}}
                 <td>{{player.name}}</td>
-                <td>{{player.total_wins}}-{{player.total_losses}}</td>
-                <td>{{player.singles_wins}}-{{player.singles_losses}}</td>
-                <td>{{player.doubles_wins}}-{{player.doubles_losses}}</td>
+                <td>{{player.total_wins_count}}-{{player.total_losses_count}}</td>
+                <td>{{player.singles_wins_count}}-{{player.singles_losses_count}}</td>
+                <td>{{player.doubles_wins_count}}-{{player.doubles_losses_count}}</td>
                 <td>{{player.mu}}</td>
             {{/link-to}}
         {{/each}}
